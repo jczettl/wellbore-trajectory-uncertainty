@@ -380,7 +380,7 @@ if __name__ == "__main__":
     # Iteratively run the orchestration pipeline for each queued target file
     for target in TARGET_FILES:
 
-        well_meta = metadata_map.get(Path(target), {})
+        well_meta = metadata_map.get(Path(target).name, {})
         
         section_borders_md = well_meta.get("section_borders_md", None)
 
