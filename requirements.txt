@@ -1,0 +1,13 @@
+# Numerical calculations and tabular data
+numpy
+pandas
+scipy
+
+# 2D plotting
+matplotlib
+
+# ISCWSA .xlsx benchmark files (pandas Excel engine)
+openpyxl
+
+# 3D visualization; unnecessary if all PyVista output is disabled
+pyvista
