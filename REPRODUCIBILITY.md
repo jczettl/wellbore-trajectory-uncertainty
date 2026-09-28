@@ -103,8 +103,6 @@ The README's NE preview is a copy of `01_trajectory_NE.png` saved as `figures/tr
 
 ## Known report/code rounding differences
 
-- The current code prints an EOW NE semi-major axis of **11.00 m** after rounding to two decimals; report Table 8 states **11.01 m**. This value should be reconciled before releasing a revised report.
-- Table 9 uses reference TVD values from the CSV. At MD 3571.7 m, the reference is 2980.65 m while the reconstructed value is approximately 2980.6454 m, which can change one-decimal rounding.
 - Very small finite-difference and near-zero covariance residuals can vary with the numerical environment.
 
 The README previews and `benchmark_summary.py` were checked with Python 3.12.14, NumPy 2.3.5, pandas 2.2.3, SciPy 1.17.0, Matplotlib 3.10.8, and openpyxl 3.1.5. These are reproduction versions, not a record of the original report's software environment.

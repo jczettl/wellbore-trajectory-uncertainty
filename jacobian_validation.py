@@ -2,7 +2,7 @@
 
 Run: python jacobian_validation.py
 Settings are at the bottom. Results go to the console; no files are written.
-Use plot_jacobian_validation.py for the two plots in report Figure 3.
+Use jacobian_validation_plot.py for the two plots.
 """
 
 import numpy as np

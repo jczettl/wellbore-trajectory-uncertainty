@@ -112,7 +112,7 @@ def min_curvature_step(inc1, inc2, azi1, azi2, dl):
         RF = (2.0 / beta) * np.tan(beta / 2.0)
     
     # Calculate displacement increments. 
-    # This is essentially the Average Angle method multiplied by the Ratio Factor (f).
+    # This is essentially the Balanced Tangential method multiplied by the Ratio Factor (f).
     dn = (dl / 2.0) * (np.sin(i1) * np.cos(a1) + np.sin(i2) * np.cos(a2)) * RF
     de = (dl / 2.0) * (np.sin(i1) * np.sin(a1) + np.sin(i2) * np.sin(a2)) * RF
     dtvd = (dl / 2.0) * (np.cos(i1) + np.cos(i2)) * RF
@@ -168,7 +168,7 @@ def slerp_interpolate_vectors(inc1, azi1, inc2, azi2, f):
 def get_jacobian(inc1, inc2, azi1, azi2, dl, balanced_tangential_jacobi_approximation=False):
     """
     Computes the exact analytical 3x5 Jacobian matrix for a Minimum Curvature step 
-    or average angle approximation if average_angle_jacobi_approximation=True.
+    or balanced tangential approximation if balanced_tangential_jacobi_approximation=True.
     
     The Jacobian represents the partial derivatives of the displacement outputs 
     (Delta North, East, TVD) with respect to the 5 inputs (inc1, azi1, inc2, azi2, dl).
@@ -208,7 +208,7 @@ def get_jacobian(inc1, inc2, azi1, azi2, dl, balanced_tangential_jacobi_approxim
     dcb_da2 = -dcb_da1
 
     if balanced_tangential_jacobi_approximation:
-        # Construct the final Jacobian columns using an average angle approximation:
+        # Construct the final Jacobian columns using an balanced tangential approximation:
         J_dl = 0.5 * ( v1 + v2 )
         J_i1 = ( dl / 2.0) * dv1_di1
         J_a1 = ( dl / 2.0) * dv1_da1

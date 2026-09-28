@@ -44,7 +44,7 @@ Calculated-minus-reference coordinate residuals from `csv_verification.py`; corr
 Run the commands from the repository root, preferably in a virtual environment:
 
 ```bash
-git clone https://github.com/Freak-1102/wellbore-trajectory-uncertainty.git
+git clone https://github.com/jczettl/wellbore-trajectory-uncertainty.git
 cd wellbore-trajectory-uncertainty
 python -m pip install -r requirements.txt
 python main.py
@@ -81,7 +81,7 @@ CSV input requires `MD` in metres, `Incl` in degrees from downward vertical, and
 | Per-workbook ISCWSA verification | `python excel_verification.py` |
 | ISCWSA coordinate residuals and maximum covariance element difference for all error terms | `python benchmark_summary.py` |
 | Volve analytical Jacobians versus finite differences | `python jacobian_validation.py` |
-| ISCWSA coordinate residuals plot | `python jacobian_validation_plot.py` |
+| Volve finite-difference Jacobian plot| `python jacobian_validation_plot.py` |
 | Volve uncertainty differences between MCM and BT | `python mcm_bt_comparison.py` |
 | Volve uncertainty differences plot | `python mcm_bt_comparison_plot.py` |
 
