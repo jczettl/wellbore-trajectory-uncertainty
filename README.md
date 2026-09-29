@@ -3,8 +3,9 @@
 Python framework for reconstructing a three-dimensional wellbore trajectory with the Minimum Curvature Method (MCM) and propagating a selected eleven-term ISCWSA Revision 5 uncertainty model. The project compares analytical MCM and Balanced Tangential (BT) sensitivities, validates them with central finite differences, and checks trajectory and covariance results against published benchmark data.
 
 **Author:** Julian Czettl  
-**Technical report:** [Wellbore Trajectory and Position-Uncertainty Modelling in Python](Report.pdf)  
-**Full reproduction guide:** [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
+**Project overview:** [Two-page technical brief](wellbore_trajectory_uncertainty_brief.pdf)  
+**Detailed documentation:** [Full technical report](wellbore_trajectory_uncertainty_report.pdf)  
+**Reproducibility:** [Data sources and reproduction instructions](REPRODUCIBILITY.md)
 
 > This is an educational implementation using generic benchmark magnitudes. It is not a complete tool-specific Position Uncertainty Model or certified software for operational survey acceptance or anti-collision decisions.
 
