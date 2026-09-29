@@ -1,12 +1,12 @@
 # Reproducing the Report
 
-This guide maps every table and figure in [Report.pdf](Report.pdf) to its input data, calculation, script, and output. Run all commands from the repository root after installing `requirements.txt`.
+This guide maps every table and figure in [wellbore_trajectory_uncertainty_report.pdf](wellbore_trajectory_uncertainty_report.pdf) to its input data, calculation, script, and output. Run all commands from the repository root after installing `requirements.txt`.
 
 ## Data and fixed settings
 
 | Input | Source and contents | Used for |
 | --- | --- | --- |
-| [`15_9_F_11_A.csv`](15_9_F_11_A.csv) | Survey from the [Equinor Volve dataset](https://www.equinor.com/energy/volve-data-sharing), supplied as MD, inclination, azimuth, and reference TVD/North/East coordinates. It contains 323 physical stations from 145.9 to 3762.0 m MD. | Coordinate verification, Jacobian checks, MCM/BT comparison, and the uncertainty case study. |
+| [`15_9_F_11_A.csv`](data\15_9_F_11_A.csv) | Survey from the [Equinor Volve dataset](https://www.equinor.com/energy/volve-data-sharing), supplied as MD, inclination, azimuth, and reference TVD/North/East coordinates. It contains 323 physical stations from 145.9 to 3762.0 m MD. | Coordinate verification, Jacobian checks, MCM/BT comparison, and the uncertainty case study. |
 | `error-model-example-mwdrev5-1-iscwsa-1.xlsx`, `...-2.xlsx`, `...-3.xlsx` | Three [ISCWSA Revision 5 benchmark workbooks](https://www.iscwsa.net/error-model-documentation/). `excel_extraction.py` reads their `Wellpath`, `Model`, and selected error-term diagnostic sheets. | Spreadsheet trajectory and covariance verification. |
 
 Keep the benchmark filenames unchanged. `excel_extraction.py` recognizes the feet-based second example from `iscwsa-2` in the filename and converts its depths to metres.
