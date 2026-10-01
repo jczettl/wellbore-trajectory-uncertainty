@@ -68,7 +68,7 @@ The 1 m SLERP grid in `main.py` supplies a smooth visual path. Covariance contri
 
 | Input | Purpose |
 | --- | --- |
-| [`15_9_F_11_A.csv`](15_9_F_11_A.csv) | Volve survey with MD, inclination, azimuth, and supplied TVD/North/East coordinates; used for the case study and coordinate validation. |
+| [`15_9_F_11_A.csv`](data/15_9_F_11_A.csv) | Volve survey with MD, inclination, azimuth, and supplied TVD/North/East coordinates; used for the case study and coordinate validation. |
 | `error-model-example-mwdrev5-1-iscwsa-{1,2,3}.xlsx` | ISCWSA Revision 5 example workbooks; used for trajectory and covariance benchmark checks. |
 
 CSV input requires `MD` in metres, `Incl` in degrees from downward vertical, and `Azi` in degrees clockwise from north. Optional `NS`, `EW`, and `TVD` columns provide the first station's tie-in coordinates.
@@ -107,4 +107,4 @@ The source, settings, and command for every report table and figure are document
 
 - [Equinor Volve dataset](https://www.equinor.com/energy/volve-data-sharing)
 - [ISCWSA error-model documentation and benchmark workbooks](https://www.iscwsa.net/error-model-documentation/)
-- Further technical references are listed in [Report.pdf](Report.pdf).
+- Further technical references are listed in [wellbore_trajectory_uncertainty_report.pdf](wellbore_trajectory_uncertainty_report.pdf).
